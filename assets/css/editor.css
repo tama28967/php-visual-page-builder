@@ -1,0 +1,59 @@
+html, body { margin: 0; padding: 0; height: 100%; }
+.editor-body { display: flex; flex-direction: column; height: 100vh; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+.editor-topbar {
+    height: 52px;
+    flex-shrink: 0;
+    background: #1f2430;
+    color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    gap: 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.topbar-logo { color: #e5e7eb; font-size: 13px; white-space: nowrap; }
+.topbar-logo:hover { color: #fff; }
+.page-title-input {
+    background: #2b3244;
+    border: 1px solid #3a4258;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 200px;
+}
+.topbar-center { display: flex; align-items: center; gap: 6px; }
+.topbar-right { display: flex; align-items: center; gap: 8px; }
+
+.tb-btn {
+    background: #2b3244;
+    border: 1px solid #3a4258;
+    color: #e5e7eb;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.tb-btn:hover { background: #3a4258; }
+.tb-btn.active { background: #4f46e5; border-color: #4f46e5; }
+.tb-sep { width: 1px; height: 24px; background: #3a4258; margin: 0 4px; }
+
+.save-status { font-size: 12px; color: #94a3b8; margin-right: 6px; }
+.save-status.dirty { color: #fbbf24; }
+.save-status.saved { color: #4ade80; }
+
+#gjs { flex: 1; overflow: hidden; }
+
+/* GrapesJS panel overrides to match dark sidebar / light right panel look */
+.gjs-one-bg { background-color: #1f2430; }
+.gjs-two-color { color: #e5e7eb; }
+.gjs-three-bg { background-color: #4f46e5; color: #fff; }
+.gjs-four-color, .gjs-four-color-h:hover { color: #4f46e5; }
+
+.gjs-pn-panel { background: #f9fafb; }
+.gjs-pn-views-container { background: #f9fafb; border-left: 1px solid #e5e7eb; }
+.gjs-cv-canvas { background: #e5e7eb; top: 0; width: 100%; }
+.gjs-block { min-height: 70px; }

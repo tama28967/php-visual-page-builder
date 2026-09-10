@@ -1,0 +1,9 @@
+# Defense in depth: uploads/ should only ever contain validated images,
+# but never allow script execution here even if that were bypassed.
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<FilesMatch "\.(php|php\d?|phtml|pht)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes -ExecCGI
